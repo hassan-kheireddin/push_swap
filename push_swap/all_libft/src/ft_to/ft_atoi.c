@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkheired <hkheired@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:07:24 by hkheired          #+#    #+#             */
-/*   Updated: 2024/09/26 07:42:56 by hkheired         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:31:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
 	long	result;
-	long	sign;
+	int	sign;
 	size_t	i;
 
 	i = 0;
@@ -36,5 +36,5 @@ int	ft_atoi(const char *nptr)
 		result += nptr[i] - '0';
 		i++;
 	}
-	return ((int)result * sign);
+	return (result * sign);
 }

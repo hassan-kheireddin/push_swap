@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkheired <hkheired@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 15:21:00 by hkheired          #+#    #+#             */
-/*   Updated: 2024/11/01 10:47:28 by hkheired         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:32:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	val_add(t_list **list_tab, char *arg)
 	else
 	{
 		result = ft_atoi(arg);
-		if ((result >= 2147483648) || check_dub(*list_tab, result))
+		if ((result >= 2147483648) || check_dub(*list_tab, result) || (result <= -2147483649))
 			handle_error(list_tab);
 		node = ft_lstnew((int)result);
 		if (!node)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_error.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkheired <hkheired@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 13:41:08 by hkheired          #+#    #+#             */
-/*   Updated: 2024/08/29 10:19:56 by hkheired         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:36:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	delete_data(int content)
 void	handle_error(t_list **list_tab)
 {
 	ft_lstclear(list_tab, &delete_data);
-	ft_printf("Error");
+	ft_printf("Error\n");
 	exit(EXIT_FAILURE);
 }
 

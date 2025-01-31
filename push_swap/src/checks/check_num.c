@@ -21,10 +21,9 @@ void	check_num(char *arg, t_list **list_tab)
 	{
 		if ((arg[i] >= '0' && arg[i] <= '9') || (arg[i] == ' ') 
 			|| arg[i] == '+' || arg[i] == '-')
-			
 			i++;
 		else
 			handle_error(list_tab);
 	}
 }
-// fn: check_num it checks if 
+
