@@ -1,62 +1,64 @@
-# so_long
+## Sort_Optimizer
 
-[![42 École](https://img.shields.io/badge/42-École-000000?style=flat&logo=42&logoColor=white)](https://42.fr)
+![Alt Text](sort_optimizer/inc/sortoptimizer.gif)
+## 🧠 Project Overview
 
-**so_long** is a 2D game project developed as part of the 42 École curriculum. This project combines game mechanics, graphics programming, and event handling to create an interactive and visually appealing game.
+`Push Swap` is an algorithmic project where the goal is to sort a stack of integers using a 
+limited set of operations and the least number of moves possible. This project focuses on algorithm optimization and data structure manipulation 
+(mainly stacks and linked lists).
 
----
+## 🧱 Objective
 
-## Table of Contents
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
+- Take an unsorted list of integers.
+- Sort the list using two stacks (`stack a` and `stack b`) and a limited set of
+ operations:
+  - `sa`, `sb`, `ss` – swap
+  - `pa`, `pb` – push
+  - `ra`, `rb`, `rr` – rotate
+  - `rra`, `rrb`, `rrr` – reverse rotate
+- Optimize the number of operations to achieve sorting in the fewest moves possible.
+
+## 📚 Key Concepts
+
+- Data structures: linked lists, stacks
+- Algorithm optimization
+- Sorting algorithms (e.g., radix sort, insertion sort)
+- Memory management in C
+- Writing efficient, clean, and testable C code
+
+## Turk Algorithm
+
+⚙️ Sorting Strategy – Turk Algorithm (42 Approach)
+
+One of the popular strategies used in the push_swap project is often referred to as the Turk algorithm, a nickname within the 42 community. It is not an official algorithm but rather a custom, optimized method developed by students to achieve minimal operations by analyzing the most efficient way to push and sort numbers between two stacks (a and b).
+🧠 Key Ideas:
+
+    Identify the best candidate in stack b to move to its correct 
+    position in stack a with the fewest operations.
+
+    Calculate and compare the cost (number of moves) for each 
+    element in stack b.
+
+    Use combined rotations (rr, rrr) to optimize movement.
+
+    Push back to stack a in the most efficient order.
+
+This approach heavily emphasizes minimizing the total number of 
+operations and is typically used after splitting the initial data
+ set using strategies like chunking or radix sorting.
+
+## 🛠️ Technologies
+
+- Language: C
 
 
----
+## 📸 Example
 
-## About the Project
-
-The **so_long** project involves creating a small 2D game where the player navigates a character through a map, collecting items and reaching an exit while avoiding obstacles. The game uses the **MiniLibX** library for rendering graphics and handling events.
-
-This project enhances skills in:
-- Graphics rendering and window management.
-- Game mechanics like player movement, collision detection, and map parsing.
-- Handling user inputs and keyboard events.
-
----
-
-## Features
-
-- **2D Rendering:** Uses the MiniLibX library to render game graphics.
-- **Keyboard Input:** Supports WASD keys for movement.
-- **Collectibles and Exit:** The player must collect all items to unlock the exit.
-- **Dynamic Map Parsing:** Reads maps from `.ber` files and validates them.
-- **Simple Game Logic:** Implements game over and success states.
-
----
-
-## Getting Started
-
-### Prerequisites
-- A Unix-based operating system (Linux or macOS recommended).
-- GCC or another compatible C compiler.
-- Make utility.
-- The MiniLibX library.
-
----
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone  https://github.com/hassan-kheireddin/push_swap.git
-   ```
-   2. Enter project:
-   ```bash
-   cd so_long
-   ```
-   3.Compile:
-   ```bash
-   make
-   ```
+```shell
+$ ./push_swap 3 2 1
+pb
+pb
+sa
+pa
+pa
+```
