@@ -1,9 +1,9 @@
-## Sort_Optimizer
+## Sort Optimizer
 
 ![Alt Text](sort_optimizer/inc/sortoptimizer.gif)
 ## 🧠 Project Overview
 
-`Push Swap` is an algorithmic project where the goal is to sort a stack of integers using a 
+`Sort Optimizer` is an algorithmic project where the goal is to sort a stack of integers using a 
 limited set of operations and the least number of moves possible. This project focuses on algorithm optimization and data structure manipulation 
 (mainly stacks and linked lists).
 
